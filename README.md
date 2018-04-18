@@ -20,10 +20,10 @@ Pin 14 is programmed to turn on or off as the firmware dictates. Pin 14 opens an
 ![portrait image of wire splices](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/wiring_portrait.JPEG)
 
 From source Hot to neutral, the wiring path is as follows:
-
+```
 Hot Source ---> lamp bulb hot ---> lamp bulb neutral -> white wire on breadboard -> relay -> red wire -> Neutral Source
             L-> USB charger hot -> USB 5V -> Adafruit Feather Huzzah -> USB charger neutral ----------^
-
+```
 ![lamp](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/lamp_portrait.JPEG)
 
 # TODO: Firmware
