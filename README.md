@@ -29,4 +29,5 @@ Hot Source ---> lamp bulb hot ---> lamp bulb neutral -> white wire on breadboard
 ![lamp](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/lamp_portrait.JPEG)
 
 # Firmware
-The firmware is just a minor tweak of example Arduino code. It connects to a given Wi-Fi signal (plug credentials in the code!) and hosts a webpage on the network. Right now, the mechanism for turning the lamp on or off is to access a different webpage, but it would be a cinch to do it with something different, such as a button press. 
+The firmware is just a minor tweak of example Arduino code. It connects to a given Wi-Fi signal (plug credentials in the code!) and hosts a webpage on the network. Right now, the mechanism for turning the lamp on or off is to access a different webpage (http://lamp/on or http://lamp/off) but it would be a cinch to do it with something different, such as a button press. 
+The hostname code is kind of spotty in my experience. DNS hates it. You might have to use the ip address of the device instead.
