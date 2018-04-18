@@ -4,9 +4,10 @@ Barebones project to rig a lamp to be controllable over a network.
 # Wiring
 
 Here is the completed wiring:
+
 ![close-up of base](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/packed_base.JPEG)
 
-A bit harrowing. let's break it down.
+A bit harrowing. Let's break it down.
 
 The first place power comes from the lamp is to a standard, generic USB charger. That harrowing-looking transformer board is actually just the charger with the case removed. I removed the outlet prongs and attached black (L for Live) and white (N for neutral) wires instead, for splicing into the lamp's power cord.
 
@@ -22,10 +23,12 @@ Pin 14 is programmed to turn on or off as the firmware dictates. Pin 14 opens an
 ![portrait image of wire splices](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/wiring_portrait.JPEG)
 
 From source Hot to neutral, the wiring path is as follows:
+
 ```
 Hot Source ---> lamp bulb hot ---> lamp bulb neutral -> white wire on breadboard -> relay -> red wire -> Neutral Source
             L-> USB charger hot -> USB 5V -> Adafruit Feather Huzzah -> USB charger neutral ----------^
 ```
+
 ![lamp](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/lamp_portrait.JPEG)
 
 # Firmware
