@@ -9,9 +9,11 @@ Here is the completed wiring:
 A bit harrowing. let's break it down.
 
 The first place power comes from the lamp is to a standard, generic USB charger. That harrowing-looking transformer board is actually just the charger with the case removed. I removed the outlet prongs and attached black (L for Live) and white (N for neutral) wires instead, for splicing into the lamp's power cord.
+
 ![USB charger breakdown](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/usb_charger.jpg)
 
 ![close-up of breadboard](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/breadboard.JPEG)
+
 Here is the chip circuitry itself. I'm using an Adafruit Feather Huzzah for my controller. It accepts 5V of input power from a microUSB connection, hence the charger. This particular model can also use a rechargeable LiPo, but why bother when it can leech the lamp power? Also, it wouldn't take much work to adapt this project for a NodeMCU board.
 
 The gist of the circuit is as follows:
@@ -26,4 +28,5 @@ Hot Source ---> lamp bulb hot ---> lamp bulb neutral -> white wire on breadboard
 ```
 ![lamp](https://github.com/micah-raney/esp8266-lamp-hack/blob/master/lamp_portrait.JPEG)
 
-# TODO: Firmware
+# Firmware
+The firmware is just a minor tweak of example Arduino code. It connects to a given Wi-Fi signal (plug credentials in the code!) and hosts a webpage on the network. Right now, the mechanism for turning the lamp on or off is to access a different webpage, but it would be a cinch to do it with something different, such as a button press. 
